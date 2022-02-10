@@ -1,0 +1,100 @@
+
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>NWD</title>
+	
+	<meta name="description" content="Opis w Google" />
+	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+
+	
+	<style>
+body{
+	padding-left:100px;
+	padding-right: 100px;
+	font-family: arial;
+	}
+
+	</style>
+	
+<script>
+function nwd(a, b) {
+if(a == 0)
+return b;
+return nwd(b%a, a);
+}
+function policz() {
+var _a = document.getElementById('a').value;
+var _b = document.getElementById('b').value;
+
+document.getElementById('nwd').innerHTML = nwd(_a, _b);
+}
+</script>
+	
+</head>
+
+<body>
+<h1>NWD </h1>
+
+
+<center>
+<h2>Schemat blokowy</h2>
+<img src = "nwd.png">
+</center>
+
+<h2>Kod cpp</h2>
+<h4>#include <bits/stdc++.h></h4>
+<h4>using namespace std;</h4>
+<h4>int main()</h4>
+<h4>{</h4>
+<h4>    int a, b;</h4>
+ <h4>   cin>> a >> b;</h4>
+  <h4>  while (a != b)</h4>
+   <h4> {
+   <h4>     if (a>b) a = a-b;</h7>
+     <h7>   else b= b-a;</h7>
+  <h7>  }</h7>
+  <h7>  cout << "NWD =" << a<< endl;</h7>
+<h4>}
+<center>
+<h2>Skrypt JS</h2>
+<p>
+a: <input type="text" id="a" value="0"><br />
+b: <input type="text" id="b" value="0"><br />
+</p>
+<p>
+<button type="button" onclick="policz()">Policz</button><br />
+</p>
+<p>
+NWD: <span id="nwd"></span><br />
+</p>
+<br>
+<div id = "wynik">...</div>
+</center>
+<br>
+<h2>Skrypt JS</h2>
+<pre style="margin: 0; line-height: 125%">&lt;script&gt;
+	<span style="color: #000080; font-weight: bold">function</span> f1()
+	{
+		<span style="color: #000080; font-weight: bold">var</span> a = document.getElementById(<span style="color: #0000FF">&quot;a&quot;</span>).value;
+		<span style="color: #000080; font-weight: bold">var</span> b = document.getElementById(<span style="color: #0000FF">&quot;b&quot;</span>).value;
+		<span style="color: #000080; font-weight: bold">if</span> (a==0);
+		<span style="color: #000080; font-weight: bold"></span> return b;
+                <span style="color: #000080; font-weight: bold"></span> return nwd(b%a, a);
+
+		
+		document.getElementById(<span style="color: #0000FF">&quot;nwd&quot;</span>).innerHTML = nwd(_a, _b);
+		
+	}
+
+&lt;/script&gt;
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
